@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "build/index.js",
+      "use": "@now/node"
+    }, {
+      "src": ".env",
+      "use": "@now/static"
+    }
+  ],
+  "env": {
+    "PROJECT_ID": "newagent-syicho",
+    "PRIVATE_KEY": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCx+Xu9tNK8s1D1\ndOdgcmJTfqqowFIOalA4aZY44x8dLpvkMS5cWvzB+e3MNXUEVOCoGRDaxc4FxJdm\np8JflTmI4nD3Ha57cjXuDZVSprvMkdDtzroh6nc0pgI3YDjxvUAVP547jifimYpH\n8R6RY0dT5iUtyr0tj5D3tZwnZgarf/m7XpGWeQ5eJYijS+iCd0Q1kCrWUqdzwOBJ\nWBQLYoWP+rSAGx43KDjn9Hi1qGz1pS3YnlOssP1HXIadidEFhM5poB+tcgTFGQn4\nRSEqaShKVK32jguctcYEvYlpRbG5SthcQ2sTNHCathrd2/SKW3y21l822xsJ9GVI\ndtzEn0IPAgMBAAECggEAKCXfhCwGXgsVeEmm6FrlU3B/jxHTcO0Kq68l9C9IFY0u\nHYv6qVrdKeT3f9mPTCrZgxIkezWkBCkU/lNZxbYkBH0Qfq5zbeWVxN3LkZmLQ9qh\nBwRbeMsrmPTaCyPptJ68lg6D42tuE/APAaui+akrrgF84ZealWyNh1OwpjKdzpHu\nljiXFbYpdDnoyImx4LZa5461Dn93NboKcaF06H3xmK453shjfNJ5iSnzXPfKm77J\nIhFTSen3pcIs7DxdytzqBBNSSfWgYAA0KsRRU3PvLeyxGuz4CpZxlgtRjpUWii95\neY856Gpy4t6upKX7gc3T9LihgM0pL/W1Ss5u2KwiAQKBgQD4rogO5nfGVIaJYsBq\nMWQvJ0dGxwWsLa4ND0aVP00lmS8t6SQCttcVtFC+CH+2pTyOG/SWVVngSO3tRY1M\nSddgZp77T80fdMsVWXxwbb3H+SKD/3C1dk6OKJKfeHaMcfabUx9lt61kZjD0Cttp\nwNZQGKJ7OXbutZr3mxkTMk56KwKBgQC3NkWoHpkfaFDrQv7YdPMFBc59mOtb4F9K\nKK9N3O8+U1W7jysnmfrc56pwTjZvDKTwEYnJD1ppMGi8ANRy4FcuRYtIbiFkYpSI\nYNp9WNaNKwifTiTEArBtZIhtXvZmH1Qsz1zB5ojKltkS0Ylnvka8pKJUCMYT/5bY\nDtNegTmZrQKBgQC/Ecp0OFu6xOMB2CAi94QUPsei9/PB0O80FZKTxalOxB3d1o3W\nkAk+IecPu5P1D4wxXAVXJIkDrMUyUwg3n1yeMvrf+PaPvrry0misMYVpimAcrz04\nD4hX7ZCKepILYtyphvpOuwu8YlAmkdj3rjR8IhFlQEfDLUG+ESr49uQZNQKBgQCK\nG8xYlnBBP8a4AjHQBCDp6V2mSi8pfDL42UCFBoYGypU3JQ6X9Lgp7C0MKblY7wQq\nwF3Ihd1WrBpXlpyP2FN/2wbK29IqNTHYuIIbuWtK0WTXifWnGIvcesto/wvpIba3\nbL10oY7+gMY0LGZTIRl7vPNtO4vtqV8RkeN+OxWrpQKBgHHIJM0Mhg3p7ulYVSvi\nRPhTZ9vXR3sPWT+sdBwf2HNfxoCKidsqM4BJ6gHBzMKXVDORVwNCMfzt0eswLr6+\nfHrTqKpOi5o9IET7LdUJV2pIDZJyMIY8MCb3ZQF2jOSPTyFT/tfGsuRM8bjW97ZP\nsxnjpa36JMYoM/DpUWVguGgl\n-----END PRIVATE KEY-----\n",
+    "CLIENT_EMAIL": "dialogflow-gpdfri@newagent-syicho.iam.gserviceaccount.com"
+  },
+  "routes": [
+    { 
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
+      },
+      "src": "/(.*)",
+      "dest": "build/index.js" 
+    }
+  ]
+}
